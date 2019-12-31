@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "storybook-ui": [
+        "dist/storybook-ui"
+      ],
+      "storybook-ui/*": [
+        "dist/storybook-ui/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
