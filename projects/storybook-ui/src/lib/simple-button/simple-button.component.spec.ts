@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StorybookUiComponent } from './storybook-ui.component';
+import { SimpleButtonComponent } from './simple-button.component';
 
-describe('StorybookUiComponent', () => {
-  let component: StorybookUiComponent;
-  let fixture: ComponentFixture<StorybookUiComponent>;
+describe('SimpleButtonComponent', () => {
+  let component: SimpleButtonComponent;
+  let fixture: ComponentFixture<SimpleButtonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StorybookUiComponent ]
+      declarations: [ SimpleButtonComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StorybookUiComponent);
+    fixture = TestBed.createComponent(SimpleButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
