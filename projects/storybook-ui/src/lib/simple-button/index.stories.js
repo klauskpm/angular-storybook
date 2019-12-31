@@ -1,7 +1,14 @@
 import { SimpleButtonComponent } from "./simple-button.component";
+import { text, withKnobs } from '@storybook/addon-knobs';
+import { moduleMetadata } from '@storybook/angular';
+import { action } from '@storybook/addon-actions';
 
 export default {
-  title: 'UI | Button'
+  title: 'UI | Button',
+  decorators: [
+    withKnobs,
+    moduleMetadata({declarations: [SimpleButtonComponent]})
+  ],
 };
 
 export const withDefaultValues = () => ({
@@ -9,11 +16,16 @@ export const withDefaultValues = () => ({
 });
 
 export const withText = () => {
-
   return {
-    component: SimpleButtonComponent,
+    template: `
+        <ui-simple-button
+          [text]="text"
+          (click)="click($event)"
+        ></ui-simple-button>
+    `,
     props: {
-      text: 'Ola'
+      text: text('Text', 'Ola'),
+      click: action('Clicou')
     }
   }
 };
