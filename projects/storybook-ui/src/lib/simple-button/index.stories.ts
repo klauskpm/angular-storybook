@@ -1,12 +1,11 @@
-import { SimpleButtonComponent } from "./simple-button.component";
-import { text, withKnobs } from '@storybook/addon-knobs';
+import { SimpleButtonComponent } from './simple-button.component';
+import { text } from '@storybook/addon-knobs';
 import { moduleMetadata } from '@storybook/angular';
 import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'UI | Button',
   decorators: [
-    withKnobs,
     moduleMetadata({declarations: [SimpleButtonComponent]})
   ],
 };
