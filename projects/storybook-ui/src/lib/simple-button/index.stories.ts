@@ -4,7 +4,7 @@ import { moduleMetadata } from '@storybook/angular';
 import { action } from '@storybook/addon-actions';
 
 export default {
-  title: 'UI | Button',
+  title: 'UI / Button',
   decorators: [
     moduleMetadata({declarations: [SimpleButtonComponent]})
   ],
@@ -26,5 +26,5 @@ export const withText = () => {
       text: text('Text', 'Ola'),
       click: action('Clicou')
     }
-  }
+  };
 };
