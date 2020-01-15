@@ -12,4 +12,7 @@ addParameters({
   options: {
     showRoots: true,
   },
+  docs: {
+    iframeHeight: 60
+  }
 });
