@@ -4,6 +4,7 @@ module.exports = {
     '../projects/**/*.stories.(ts|js)'
   ],
   addons: [
+    '@storybook/addon-docs',
     '@storybook/addon-knobs',
     '@storybook/addon-actions'
   ]
