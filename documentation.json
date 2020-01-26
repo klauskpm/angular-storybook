@@ -1,0 +1,456 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-c0ccca27e5983f0a1d84cd0fd61a9715",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.sass"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.sass']\n})\nexport class AppComponent {}\n\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.sass"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "Ola Mundo!\n<ui-simple-button></ui-simple-button>\n"
+        },
+        {
+            "name": "SimpleButtonComponent",
+            "id": "component-SimpleButtonComponent-0cfb05f9297048bb316436636768d829",
+            "file": "projects/storybook-ui/src/lib/simple-button/simple-button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ui-simple-button",
+            "styleUrls": [],
+            "styles": [
+                ""
+            ],
+            "template": "<button>{{text}}</button>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "text",
+                    "defaultValue": "'clique aqui'",
+                    "description": "<p>Input que define o texto apresentado no botão</p>\n",
+                    "line": 28
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "clicked",
+                    "defaultValue": "new EventEmitter()",
+                    "description": "<p>Output fake</p>\n",
+                    "line": 22,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "empty",
+                    "type": "TemplateRef<any>",
+                    "optional": false,
+                    "description": "<p>ViewChild que está vinculada a nada</p>\n",
+                    "line": 16,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'empty', {static: false}"
+                        }
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "complexMethod",
+                    "args": [
+                        {
+                            "name": "num1",
+                            "type": "number"
+                        },
+                        {
+                            "name": "num2",
+                            "type": "number"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 40,
+                    "description": "<p>Método complexo e privado</p>\n",
+                    "modifierKind": [
+                        112
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "num1",
+                            "type": "number",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "num2",
+                            "type": "number",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "tagName": {
+                                "pos": 679,
+                                "end": 685,
+                                "flags": 0,
+                                "escapedText": "return"
+                            },
+                            "comment": "<p>string</p>\n"
+                        }
+                    ]
+                },
+                {
+                    "name": "simpleMethod",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 34,
+                    "description": "<p>Método simples e público</p>\n",
+                    "modifierKind": [
+                        114
+                    ],
+                    "jsdoctags": [
+                        {
+                            "tagName": {
+                                "pos": 584,
+                                "end": 590,
+                                "flags": 0,
+                                "escapedText": "return"
+                            },
+                            "comment": "<p>void</p>\n"
+                        }
+                    ]
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output, TemplateRef, ViewChild } from '@angular/core';\n\n@Component({\n  selector: 'ui-simple-button',\n  template: `\n    <button>{{text}}</button>\n  `,\n  styles: [``]\n})\nexport class SimpleButtonComponent {\n\n  /**\n   * ViewChild que está vinculada a nada\n   */\n  @ViewChild('empty', { static: false })\n  empty: TemplateRef<any>;\n\n  /**\n   * Output fake\n   */\n  @Output()\n  clicked = new EventEmitter();\n\n  /**\n   * Input que define o texto apresentado no botão\n   */\n  @Input()\n  text = 'clique aqui';\n\n  /**\n   * Método simples e público\n   * @return void\n   */\n  public simpleMethod(): void {}\n\n  /**\n   * Método complexo e privado\n   * @return string\n   */\n  private complexMethod(num1: number, num2: number): string {\n    return '';\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "SimpleButtonModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "SimpleButtonModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "SimpleButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "SimpleButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/storybook-ui/src/test.ts",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "type": "object",
+                "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/storybook-ui/src/test.ts",
+                "type": "any"
+            },
+            {
+                "name": "withDefaultValues",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/storybook-ui/src/lib/simple-button/stories/stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\n  component: SimpleButtonComponent\n})"
+            },
+            {
+                "name": "withText",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/storybook-ui/src/lib/simple-button/stories/stories.ts",
+                "type": "",
+                "defaultValue": "() => {\n  return {\n    template: `\n        <ui-simple-button\n          [text]=\"text\"\n          (click)=\"click($event)\"\n        ></ui-simple-button>\n    `,\n    props: {\n      text: text('Text', 'Ola'),\n      click: action('Clicou')\n    }\n  };\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "projects/storybook-ui/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/storybook-ui/src/test.ts",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/storybook-ui/src/test.ts",
+                    "type": "any"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false\n}"
+                }
+            ],
+            "projects/storybook-ui/src/lib/simple-button/stories/stories.ts": [
+                {
+                    "name": "withDefaultValues",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/storybook-ui/src/lib/simple-button/stories/stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\n  component: SimpleButtonComponent\n})"
+                },
+                {
+                    "name": "withText",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/storybook-ui/src/lib/simple-button/stories/stories.ts",
+                    "type": "",
+                    "defaultValue": "() => {\n  return {\n    template: `\n        <ui-simple-button\n          [text]=\"text\"\n          (click)=\"click($event)\"\n        ></ui-simple-button>\n    `,\n    props: {\n      text: text('Text', 'Ola'),\n      click: action('Clicou')\n    }\n  };\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": [],
+    "coverage": {
+        "count": 10,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "projects/storybook-ui/src/lib/simple-button/simple-button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SimpleButtonComponent",
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
+            },
+            {
+                "filePath": "projects/storybook-ui/src/lib/simple-button/stories/stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "withDefaultValues",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/storybook-ui/src/lib/simple-button/stories/stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "withText",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/storybook-ui/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/storybook-ui/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}
