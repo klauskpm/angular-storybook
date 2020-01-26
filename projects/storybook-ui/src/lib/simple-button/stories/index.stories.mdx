@@ -1,0 +1,39 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { moduleMetadata, addDecorator } from '@storybook/angular';
+import { SimpleButtonComponent } from '../simple-button.component';
+import * as stories from './stories.ts';
+
+<Meta
+  title='UI / SimpleButton'
+  component={SimpleButtonComponent}
+  decorators={[moduleMetadata({ declarations: [SimpleButtonComponent] })]}
+/>
+
+# SimpleButton Component
+
+Uma descrição simples em **markdown**.
+Exibindo o `SimpleButtonComponent` usando o `Story`.
+
+<Story name='simples' height='60px'>{{
+  component: SimpleButtonComponent,
+  props: {},
+}}</Story>
+
+## Props
+
+A tabela de propriedades é exibida com usando o `Props`.
+
+<Props of={SimpleButtonComponent} />
+
+
+## Stories
+
+Usando histórias criadas em CSF no MDX
+
+<Preview>
+  <Story name="com valores default">{stories.withDefaultValues()}</Story>
+</Preview>
+
+<Preview>
+  <Story name="com texto diferente">{stories.withText()}</Story>
+</Preview>
