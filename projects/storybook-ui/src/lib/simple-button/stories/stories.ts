@@ -1,15 +1,6 @@
-import { SimpleButtonComponent } from './simple-button.component';
-import { text } from '@storybook/addon-knobs';
-import { moduleMetadata } from '@storybook/angular';
 import { action } from '@storybook/addon-actions';
-
-export default {
-  title: 'UI / Button',
-  component: SimpleButtonComponent,
-  decorators: [
-    moduleMetadata({declarations: [SimpleButtonComponent]})
-  ],
-};
+import { text } from '@storybook/addon-knobs';
+import { SimpleButtonComponent } from '../simple-button.component';
 
 export const withDefaultValues = () => ({
   component: SimpleButtonComponent
