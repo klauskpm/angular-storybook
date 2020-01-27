@@ -55,6 +55,7 @@
     "protractor": "~5.4.0",
     "react": "^16.12.0",
     "react-is": "^16.12.0",
+    "storybook-design-token": "^0.5.1",
     "ts-node": "~7.0.0",
     "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
